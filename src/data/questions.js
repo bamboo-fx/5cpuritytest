@@ -1,102 +1,201 @@
 export const questions = [
-  "Made out with someone at a 5C party",
-  "Hooked up with someone from a different 5C",
-  "Completed the \"5C Challenge\"",
-  "Hooked up in a dorm lounge",
-  "Hooked up in a library",
-  "Had a sneaky link walk of shame across campuses",
-  "Used the phrase \"It's not that deep\" to justify bad decisions",
-  "Caught feelings for someone from another 5C",
-  "Got ghosted by someone from the 5C dating pool",
-  "Dated someone from another campus long-term",
-  "Had a 5C situationship that no one defined",
-  "Got with a TA or RA",
-  "Made out at a TNC",
-  "Wrote or received a Claremont Missed Connection",
-  "Hooked up after a group project",
-  "Used Tinder or Bumble with your campus as bio",
-  "Attended TNC",
-  "Attended Snack",
-  "Went to a party at CMC's North Quad",
-  "Partied at Pitzer's Grove House",
-  "Got kicked out of a CMC party",
-  "Woke up in a dorm that wasn't yours",
-  "Lost your ID at a party",
-  "Attended a 5C-wide darty (day party)",
-  "Chugged out of a Windex bottle at a Mudd party",
-  "Crashed a party uninvited",
-  "Crowd-surfed at a 5C event",
-  "Played rage cage with strangers",
-  "Played \"Never Have I Ever\" and exposed yourself",
-  "Took a party selfie that you regretted the next day",
-  "Got lost trying to find a class on another campus",
-  "Took a Pitzer class for an easy A",
-  "Spent too much money at the Coop Fountain",
-  "Fell asleep in the Motley",
-  "Lied and said you were a Pomona student",
-  "Wore your CMC merch unironically",
-  "Took the Scripps tea cups",
-  "Went to Mudd just for the dining hall",
-  "Complained about Pomona kids being pretentious",
-  "Used the Pitzer sculpture garden as a shortcut",
-  "Got food from the 5C Food Truck (and waited 45 mins)",
-  "Attended a Scripps concert or poetry night",
-  "Smoked at Pitzer",
-  "Hooked up in the Pomona Coop",
-  "Started walking to class and realized you were at the wrong college",
-  "Crammed an entire paper the night before",
-  "Asked ChatGPT to write a discussion post",
-  "Slept through a class and didn't care",
-  "Skipped class to go to the beach",
-  "Failed a midterm",
-  "Got a B+ and still cried",
-  "Took a class pass/no pass just to survive",
-  "Complained about the registration system",
-  "Used a professor's first name in an email",
-  "Cried in the library",
-  "Had a breakdown during finals week",
-  "Used a friend's ID to print something",
-  "Took a nap in class",
-  "Changed majors at least once",
-  "Used RateMyProf religiously",
-  "Lived with someone you barely knew",
-  "Got into an argument about splitting chores",
-  "Had a friendship break up",
-  "Joined a group chat then muted it immediately",
-  "Sent a screenshot to the wrong person",
-  "Faked being busy to avoid plans",
-  "Knew someone dating two people in different 5Cs",
-  "Did the walk of shame while your friends watched from the dorm",
-  "Helped a friend with a 5C-related scandal",
-  "Unfollowed someone after a dorm fight",
-  "Gossiped about 5C drama over brunch",
-  "Wrote a vague Instagram caption about someone",
-  "Slept through brunch plans",
-  "Had your secret exposed via GroupMe",
-  "Ate at every dining hall at least once",
-  "Rode the LimeBike or scooter drunk",
-  "Made fun of Pitzer kids for being too chill",
-  "Mocked CMC bros",
-  "Spent a whole day sunbathing on Marston Quad",
-  "Joined a student org just for the merch",
-  "Went to the library and just scrolled on your phone",
-  "Accidentally walked into a campus tour",
-  "Said \"Claremont bubble\" unironically",
-  "Stole food from a dining hall",
-  "Used your friend's dining card at a different school",
-  "Hiked the Claremont hills for the vibes",
-  "Pulled an all-nighter and still failed",
-  "Called Pomona \"the Harvard of the West\" sarcastically",
-  "Got a fake ID for off-campus bars",
-  "Ate vending machine food for dinner",
-  "Attended a CMS or PP sports game",
-  "Slept through practice",
-  "Made out with someone on a sports team",
-  "Missed class because of travel for a game",
-  "Pretended to be on a team to get dining hall respect",
-  "Cheered loudly at a CMS vs PP game",
-  "Ran the turf field at night for fun",
-  "Got injured at IM sports",
-  "Joined a club and never went after the first meeting",
-  "Hooked up with a club e-board member"
+"Pulled an all-nighter in Honnold-Mudd"
+
+"Changed your major at least once"
+
+"Cried over a P-set"
+
+"Helped a stranger on a problem set"
+
+"Attended office hours for the snacks"
+
+"Studied in the Skyspace at Pomona"
+
+"Done homework on Marston Quad"
+
+"Procrastinated by walking to all 5 campuses"
+
+"Got lost trying to find a class at Mudd"
+
+"Took a class just because it sounded fun"
+
+"Got a free t-shirt from a campus event"
+
+"Been to at least one 5C club fair"
+
+"Worn pajamas to Malott brunch"
+
+"Got a smoothie from Pitzer Grove House"
+
+"Participated in or watched Pitzer Reggae Fest"
+
+"Slept in the Motley"
+
+"Got hit by a sprinkler while walking across a quad"
+
+"Slipped on a scooter near Walker Wall"
+
+"Got a sunburn in the middle of February"
+
+"Took a nap on a campus lawn"
+
+"Attended a 5C party"
+
+"Went to a campus dance or formal"
+
+"Helped set up a school event"
+
+"Played Just Dance or Mario Kart at a dorm event"
+
+"Gone to Snack"
+
+"Went to the 5C Talent Show"
+
+"Danced in a silent disco at CMC"
+
+"Watched a movie on a quad lawn"
+
+"Attended a themed dining hall night"
+
+"Done karaoke in your dorm lounge"
+
+"Walked from Pitzer to Mudd at night"
+
+"Tried food at all 7 dining halls"
+
+"Got caught in the Mudd/Pomona cross-campus rivalry"
+
+"Hung out in the Scripps tea room"
+
+"Snuck into a dorm that's not your own"
+
+"Got mistaken for a student from another 5C"
+
+"Found the tunnel under the campuses"
+
+"Biked between campuses just for fun"
+
+"Got denied entry to Collins for not having a student ID"
+
+"Lost your ID and had to get a replacement"
+
+"Created a ‘Frary hack’ food combo"
+
+"Waited in the long Collins omelet line"
+
+"Been to Hoch for late night"
+
+"Tried Pitzer’s vegan options"
+
+"Made a DIY dessert at Malott"
+
+"Dined with a professor"
+
+"Spilled food in the dining hall"
+
+"Ate at all 5C dining halls in one day"
+
+"Forgot it was Meatless Monday"
+
+"Took extra fruit ‘for later’"
+
+"Walked past a photoshoot on campus"
+
+"Participated in a protest or demonstration"
+
+"Sat through a Philosophy of Mind discussion at Pomona"
+
+"Had a deep life talk on a random bench"
+
+"Added a club to your resume after attending one meeting"
+
+"Took a yoga class at Scripps"
+
+"Got overwhelmed by Moodle or Sakai"
+
+"Used a whiteboard in the library to explain your feelings"
+
+"Stayed in your PJs all day without judgment"
+
+"Picked up a free tote bag or water bottle"
+
+"Locked yourself out of your room"
+
+"Attended a dorm study break"
+
+"Borrowed something from a floormate"
+
+"Left your laundry in too long"
+
+"Took the elevator just one floor"
+
+"Burned popcorn in the microwave"
+
+"Had a floor movie night"
+
+"Decorated your door with memes"
+
+"Left passive-aggressive notes on shared items"
+
+"Heard someone blasting music at 2 a.m."
+
+"Painted something on Walker Wall"
+
+"Attended a student performance or play"
+
+"Sang at a 5C open mic"
+
+"Toured the Benton Museum of Art"
+
+"Visited the Pitzer Art Galleries"
+
+"Took photos in the Scripps rose garden"
+
+"Danced in a 5C showcase"
+
+"Bought student art at a craft fair"
+
+"Jammed at a Grove House open mic"
+
+"Participated in or watched 5C Improv"
+
+"Climbed a tree on campus"
+
+"Studied on a hammock"
+
+"Played spikeball or frisbee on a quad"
+
+"Gone on a hike up Potato Mountain"
+
+"Done a beach and mountain trip in one day"
+
+"Biked through the Claremont Village"
+
+"Taken a photo of a peacock at Scripps"
+
+"Attended a sunrise or sunset picnic"
+
+"Played in a 5C intramural sport"
+
+"Seen a wild bunny or squirrel on campus"
+
+"Helped a fellow 5C student in need"
+
+"Thanked dining hall or facilities staff"
+
+"Given a tour to a prospective student"
+
+"Received a random act of kindness on campus"
+
+"Donated clothes to a student-run drive"
+
+"Participated in a campus cleanup"
+
+"Gave someone your last Claremont Cash swipe"
+
+"Left encouraging sticky notes around campus"
+
+"Befriended someone from a different 5C"
+
+"Felt truly grateful to be at the Claremont Colleges"
 ];
