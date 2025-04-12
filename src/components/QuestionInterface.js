@@ -7,17 +7,12 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const CategorySection = styled.div`
+const QuestionSection = styled.div`
   margin-bottom: 30px;
   background-color: ${props => props.theme.card};
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const CategoryTitle = styled.h2`
-  color: ${props => props.theme.primary};
-  margin-bottom: 15px;
 `;
 
 const QuestionItem = styled.div`
@@ -90,10 +85,9 @@ function QuestionInterface({ onComplete, answers, setAnswers }) {
     setCurrentScore(100 - checkedCount);
   }, [answers]);
 
-  const handleCheckbox = (categoryIndex, questionIndex) => {
-    const globalIndex = categoryIndex * 10 + questionIndex;
+  const handleCheckbox = (index) => {
     const newAnswers = [...answers];
-    newAnswers[globalIndex] = !newAnswers[globalIndex];
+    newAnswers[index] = !newAnswers[index];
     setAnswers(newAnswers);
   };
 
@@ -108,21 +102,18 @@ function QuestionInterface({ onComplete, answers, setAnswers }) {
       </ProgressBar>
       <Score>Current Score: {currentScore}</Score>
 
-      {questions.map((category, categoryIndex) => (
-        <CategorySection key={category.category}>
-          <CategoryTitle>{category.category}</CategoryTitle>
-          {category.items.map((question, questionIndex) => (
-            <QuestionItem key={questionIndex}>
-              <Checkbox
-                type="checkbox"
-                checked={answers[categoryIndex * 10 + questionIndex]}
-                onChange={() => handleCheckbox(categoryIndex, questionIndex)}
-              />
-              {question}
-            </QuestionItem>
-          ))}
-        </CategorySection>
-      ))}
+      <QuestionSection>
+        {questions.map((question, index) => (
+          <QuestionItem key={index}>
+            <Checkbox
+              type="checkbox"
+              checked={answers[index]}
+              onChange={() => handleCheckbox(index)}
+            />
+            {question}
+          </QuestionItem>
+        ))}
+      </QuestionSection>
 
       <CompleteButton onClick={handleComplete}>
         Complete Test
