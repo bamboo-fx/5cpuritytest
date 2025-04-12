@@ -28,6 +28,15 @@ const Disclaimer = styled.p`
   margin-top: 20px;
 `;
 
+const PrivacyNotice = styled.div`
+  margin-top: 20px;
+  padding: 15px;
+  background-color: ${props => props.theme.border};
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+`;
+
 const StartButton = styled.button`
   font-size: 1.2rem;
   padding: 15px 30px;
@@ -39,16 +48,25 @@ function LandingPage({ onStart }) {
     <Container>
       <Title>5C Purity Test</Title>
       <Description>
-        Welcome to the Claremont Colleges Purity Test! This test measures your experiences
-        across the 5Cs - Pomona, Scripps, CMC, Harvey Mudd, and Pitzer. From academic adventures
-        to social traditions, see how many quintessential 5C experiences you've had!
+        Welcome to the Claremont Colleges Purity Test! See how many quintessential 5C experiences 
+        you've had. Your score starts at 100 and decreases with each item you've done. 
+        The lower your score, the more 5C experiences you've had!
       </Description>
-      <Description>
-        Answer honestly about your experiences at the Claremont Colleges. Your score starts at 100
-        and decreases with each item you've done. The lower your score, the more 5C experiences
-        you've had!
-      </Description>
+      
+      <PrivacyNotice>
+        <strong>🔒 Privacy Information:</strong>
+        <ul>
+          <li>This test is completely anonymous</li>
+          <li>No personal information is collected</li>
+          <li>Your responses are only stored locally on your device</li>
+          <li>Your answers are never uploaded to any server</li>
+          <li>We use anonymous analytics only to count total visitors</li>
+          <li>No individual responses or scores are tracked</li>
+        </ul>
+      </PrivacyNotice>
+
       <StartButton onClick={onStart}>Start Test</StartButton>
+      
       <Disclaimer>
         Note: This test is for entertainment purposes only. All responses are stored locally
         and not shared with any third parties.
