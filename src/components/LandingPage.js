@@ -4,43 +4,54 @@ import styled from 'styled-components';
 const Container = styled.div`
   max-width: 800px;
   text-align: center;
-  padding: 40px;
+  margin: 40px auto;
+  padding: 40px 20px;
   background-color: ${props => props.theme.card};
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: ${props => props.theme.primary};
-`;
-
-const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 3rem;
   margin-bottom: 30px;
+  color: ${props => props.theme.primary};
+  font-weight: bold;
+`;
+
+const Description = styled.div`
+  font-size: 1.1rem;
   line-height: 1.6;
-`;
+  margin-bottom: 40px;
+  color: ${props => props.theme.text};
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 
-const Disclaimer = styled.p`
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 20px;
-`;
-
-const PrivacyNotice = styled.div`
-  margin-top: 20px;
-  padding: 15px;
-  background-color: ${props => props.theme.border};
-  border-radius: 5px;
-  font-size: 0.9rem;
-  text-align: left;
+  p {
+    margin-bottom: 20px;
+  }
 `;
 
 const StartButton = styled.button`
   font-size: 1.2rem;
-  padding: 15px 30px;
-  margin-top: 20px;
+  padding: 15px 40px;
+  background-color: ${props => props.theme.button.background};
+  color: ${props => props.theme.button.text};
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: ${props => props.theme.button.hover};
+  }
+`;
+
+const PrivacyNotice = styled.div`
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: ${props => props.theme.text};
+  opacity: 0.8;
 `;
 
 function LandingPage({ onStart }) {
@@ -48,29 +59,27 @@ function LandingPage({ onStart }) {
     <Container>
       <Title>5C Purity Test</Title>
       <Description>
-        Welcome to the Claremont Colleges Purity Test! See how many quintessential 5C experiences 
-        you've had. Your score starts at 100 and decreases with each item you've done. 
-        The lower your score, the more 5C experiences you've had!
+        <p>
+          The 5C Purity Test is an unofficial purity test designed to measure your experiences
+          at the Claremont Colleges (5Cs), inspired by the Rice Purity Test.
+        </p>
+        <p>
+          Instructions: Check each box if you have done the action described. Your score starts at 100
+          and decreases with each item you've done. The lower your score, the more 5C experiences
+          you've had!
+        </p>
+        <p>
+          <strong>Note:</strong> This website does not condone illegal activities, and it is strongly
+          recommended that you do not aim to complete every item on this list.
+        </p>
       </Description>
-      
-      <PrivacyNotice>
-        <strong>🔒 Privacy Information:</strong>
-        <ul>
-          <li>This test is completely anonymous</li>
-          <li>No personal information is collected</li>
-          <li>Your responses are only stored locally on your device</li>
-          <li>Your answers are never uploaded to any server</li>
-          <li>We use anonymous analytics only to count total visitors</li>
-          <li>No individual responses or scores are tracked</li>
-        </ul>
-      </PrivacyNotice>
 
       <StartButton onClick={onStart}>Start Test</StartButton>
-      
-      <Disclaimer>
-        Note: This test is for entertainment purposes only. All responses are stored locally
-        and not shared with any third parties.
-      </Disclaimer>
+
+      <PrivacyNotice>
+        🔒 This test is completely anonymous. All responses are stored locally and never uploaded.
+        We only use anonymous analytics to count total visitors.
+      </PrivacyNotice>
     </Container>
   );
 }

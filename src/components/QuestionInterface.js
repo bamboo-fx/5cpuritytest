@@ -5,26 +5,59 @@ import { questions } from '../data/questions';
 const Container = styled.div`
   max-width: 800px;
   width: 100%;
-`;
-
-const QuestionSection = styled.div`
-  margin-bottom: 30px;
-  background-color: ${props => props.theme.card};
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
-const QuestionItem = styled.div`
+const Header = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${props => props.theme.background};
+  padding: 20px 0;
+  z-index: 100;
+`;
+
+const ProgressBar = styled.div`
+  width: 100%;
+  height: 8px;
+  background-color: ${props => props.theme.border};
+  border-radius: 4px;
+  overflow: hidden;
+`;
+
+const Progress = styled.div`
+  width: ${props => props.progress}%;
+  height: 100%;
+  background-color: ${props => props.theme.button.background};
+  transition: width 0.3s ease;
+`;
+
+const Score = styled.div`
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: ${props => props.theme.primary};
+  text-align: center;
+`;
+
+const QuestionList = styled.div`
+  margin-top: 30px;
+  margin-bottom: 100px;
+`;
+
+const QuestionItem = styled.label`
   display: flex;
   align-items: center;
-  margin: 10px 0;
-  padding: 10px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  background-color: ${props => props.theme.card};
   border-radius: 5px;
-  transition: background-color 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    background-color: ${props => props.theme.border};
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -35,43 +68,30 @@ const Checkbox = styled.input`
   cursor: pointer;
 `;
 
-const ProgressBar = styled.div`
-  width: 100%;
-  height: 10px;
-  background-color: ${props => props.theme.border};
-  border-radius: 5px;
-  margin: 20px 0;
-  position: sticky;
-  top: 20px;
-`;
-
-const Progress = styled.div`
-  width: ${props => props.progress}%;
-  height: 100%;
-  background-color: ${props => props.theme.primary};
-  border-radius: 5px;
-  transition: width 0.3s ease;
+const QuestionText = styled.span`
+  font-size: 1.1rem;
+  color: ${props => props.theme.text};
+  user-select: none;
 `;
 
 const CompleteButton = styled.button`
-  position: sticky;
+  position: fixed;
   bottom: 20px;
-  width: 100%;
-  padding: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
   font-size: 1.2rem;
-  margin-top: 20px;
-`;
-
-const Score = styled.div`
-  position: sticky;
-  top: 40px;
-  background-color: ${props => props.theme.primary};
-  color: white;
-  padding: 10px 20px;
+  background-color: ${props => props.theme.button.background};
+  color: ${props => props.theme.button.text};
+  border: none;
   border-radius: 5px;
-  text-align: center;
-  margin: 10px 0;
-  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: ${props => props.theme.button.hover};
+  }
 `;
 
 function QuestionInterface({ onComplete, answers, setAnswers }) {
@@ -79,7 +99,6 @@ function QuestionInterface({ onComplete, answers, setAnswers }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Calculate progress
     const checkedCount = answers.filter(answer => answer).length;
     setProgress((checkedCount / answers.length) * 100);
     setCurrentScore(100 - checkedCount);
@@ -97,12 +116,14 @@ function QuestionInterface({ onComplete, answers, setAnswers }) {
 
   return (
     <Container>
-      <ProgressBar>
-        <Progress progress={progress} />
-      </ProgressBar>
-      <Score>Current Score: {currentScore}</Score>
+      <Header>
+        <ProgressBar>
+          <Progress progress={progress} />
+        </ProgressBar>
+        <Score>Score: {currentScore}</Score>
+      </Header>
 
-      <QuestionSection>
+      <QuestionList>
         {questions.map((question, index) => (
           <QuestionItem key={index}>
             <Checkbox
@@ -110,10 +131,12 @@ function QuestionInterface({ onComplete, answers, setAnswers }) {
               checked={answers[index]}
               onChange={() => handleCheckbox(index)}
             />
-            {question}
+            <QuestionText>
+              {question}
+            </QuestionText>
           </QuestionItem>
         ))}
-      </QuestionSection>
+      </QuestionList>
 
       <CompleteButton onClick={handleComplete}>
         Complete Test

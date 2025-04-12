@@ -1,21 +1,29 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
-  background: '#ffffff',
+  background: '#f5f5f5',
   text: '#333333',
-  primary: '#800000', // Claremont maroon
-  secondary: '#FFD700', // Gold
-  card: '#f5f5f5',
-  border: '#e0e0e0'
+  primary: '#003262',  // Berkeley Blue
+  card: '#ffffff',
+  border: '#e0e0e0',
+  button: {
+    background: '#003262',
+    text: '#ffffff',
+    hover: '#004785'
+  }
 };
 
 export const darkTheme = {
   background: '#1a1a1a',
   text: '#ffffff',
-  primary: '#a02020', // Lighter maroon for dark mode
-  secondary: '#ffd700',
+  primary: '#3B7EA1',  // Lighter Berkeley Blue for dark mode
   card: '#2d2d2d',
-  border: '#404040'
+  border: '#404040',
+  button: {
+    background: '#3B7EA1',
+    text: '#ffffff',
+    hover: '#4B8EB1'
+  }
 };
 
 export const GlobalStyles = createGlobalStyle`
